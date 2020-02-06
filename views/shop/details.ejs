@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= yourTitle %></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href='/'>Main Page</a></li>
+                <li><a href='/add-product'>Add More Products</a></li>
+                <li><a href='/cart'>Cart</a></li>
+                <li><a href='/admin-products'>Admin Products</a></li>
+                <li><a href='/checkout'>Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+            <h1>Here is the description of the product</h1>
+            <h4>Product Name: <%= prods.title %></h4>
+            <h4>Product Price: <%= prods.price %></h4>
+            <form action='/cart' method="POST">
+            <button type="submit">Add TO CART</button>
+            <input type="hidden" name="productId" value="<%= prods.id %>">
+            </form>
+    </main>
+
+</body>
+</html>
